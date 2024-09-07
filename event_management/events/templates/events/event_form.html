@@ -1,0 +1,16 @@
+<!-- events/templates/events/event_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Form</title>
+</head>
+<body>
+    <h1>{{ event.title|default:"Create New Event" }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'event_list' %}">Back to event list</a>
+</body>
+</html>

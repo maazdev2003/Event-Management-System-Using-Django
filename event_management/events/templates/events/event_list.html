@@ -1,0 +1,28 @@
+<!-- events/templates/events/event_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event List</title>
+</head>
+<body>
+    <h1>Event List</h1>
+    <form method="get" action="{% url 'event_list' %}">
+        <input type="text" name="q" placeholder="Search events..." value="{{ request.GET.q }}">
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        {% for event in events %}
+            <li><a href="{% url 'event_detail' event.pk %}">{{ event.title }}</a> ({{ event.category.name }})</li>
+        {% empty %}
+            <li>No events found.</li>
+        {% endfor %}
+    </ul>
+    <h2>Categories</h2>
+    <ul>
+        {% for category in categories %}
+            <li><a href="{% url 'events_by_category' category.pk %}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'event_create' %}">Create a new event</a>
+</body>
+</html>

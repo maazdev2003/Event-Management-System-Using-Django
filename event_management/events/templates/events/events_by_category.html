@@ -1,0 +1,18 @@
+<!-- events/templates/events/events_by_category.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events in {{ category.name }}</title>
+</head>
+<body>
+    <h1>Events in {{ category.name }}</h1>
+    <ul>
+        {% for event in events %}
+            <li><a href="{% url 'event_detail' event.pk %}">{{ event.title }}</a></li>
+        {% empty %}
+            <li>No events found in this category.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'event_list' %}">Back to event list</a>
+</body>
+</html>
