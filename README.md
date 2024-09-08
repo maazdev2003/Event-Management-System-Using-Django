@@ -36,6 +36,8 @@ pip install django
 - Main page
 ![django2](https://github.com/user-attachments/assets/66619931-5698-481b-b144-7cba195e5e55)
 
+![django3](https://github.com/user-attachments/assets/712d8b96-6923-4597-8966-10445f960dd1)
+
 
 
 ### Installation
