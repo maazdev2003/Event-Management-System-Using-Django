@@ -29,6 +29,14 @@ To install Django, use the following command:
 ```bash
 pip install django
 ```
+## Screenshots
+- Login page
+![django1](https://github.com/user-attachments/assets/3e757061-d980-420c-b060-51aa08d3dec3)
+
+- Main page
+  
+
+
 
 ### Installation
 
